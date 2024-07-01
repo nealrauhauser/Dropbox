@@ -2,8 +2,8 @@
 import dropbox
 import sys
 
-# Initialize Dropbox client
-dbx = dropbox.Dropbox('sl.BxSmB4XdEPky712sKeeo83YybFmyy0W_mZ-UV2gyDIECmvc6p9Um59XNDi2KLRZuqqCrY9-0fBYAcb6T3Uvkny7CwsdbFMumTPDFC0LLtmxjtEjCC2HSVI3xqL060WKRPZdF0GWykW4fYbUiOFeEdQM')
+# Initialize Dropbox client with an access token
+dbx = dropbox.Dropbox('')
 
 # Function to list all files URLs in a folder
 def list_files_urls(folder_path):
@@ -11,8 +11,6 @@ def list_files_urls(folder_path):
     for file in files:
         if isinstance(file, dropbox.files.FileMetadata):
             file_url = dbx.files_get_temporary_link(file.path_lower).link
-            #print("File:", file.name)
-            #print("URL:", file_url)
             print(file_url)
 
 # Call the function with the specified folder path
