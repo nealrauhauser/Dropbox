@@ -3,7 +3,7 @@ import dropbox
 import sys
 
 # Initialize Dropbox client with an access token
-dbx = dropbox.Dropbox('')
+dbx = dropbox.Dropbox('sl.BxSmB4XdEPky792sKffo83YybFmyy1W_m3-UV2gyDIECmvcqp9Um59XNDi2KLRZuqqCrYz-0fBYAcb6T3Uvkny7CwsdbFMumTPDFC0LLtmxjtEjCC2HSVI3xqL060WKRPZdF0GWykW4fYbUiOFeEdQM')
 
 # Function to list all files URLs in a folder
 def list_files_urls(folder_path):
